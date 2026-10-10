@@ -1,0 +1,106 @@
+.hero {
+  display: flex;
+  min-height: 600px; /* Высота секции, посмотри в фигме */
+}
+
+/* Левая часть */
+.leftBlock {
+  flex: 1; /* Занимает половину экрана */
+  background-color: #EEF4F4; /* Цвет фона левой части (светло-голубой) */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Прижимаем контент к центру экрана */
+  padding-right: 50px; /* Отступ от центра */
+}
+
+.textContent {
+  max-width: 500px; /* Ширина текстового блока */
+}
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  
+  span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #7A9B9B;
+    letter-spacing: 1.5px;
+  }
+}
+
+h1 {
+  font-family: 'Playfair Display', serif; /* Скорее всего там шрифт с засечками */
+  font-size: 56px;
+  line-height: 1.1;
+  color: #111;
+  margin-bottom: 25px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.mainBtn {
+  background-color: #7A9B9B;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #5C7A7A;
+  }
+}
+
+/* Правая часть */
+.rightBlock {
+  flex: 1; /* Занимает вторую половину экрана */
+  background-color: #2F3E3E; /* Темно-зеленый цвет фона */
+  /* Если там текстура, раскомментируй строку ниже и добавь картинку */
+  /* background-image: url('../../assets/images/hero-bg-right.jpg'); */
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Прижимаем к центру экрана */
+  padding-left: 50px;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 450px; /* Ширина фото с девушкой */
+  height: 500px; /* Высота фото */
+  /* Сдвигаем влево, чтобы фото наезжало на светлый фон */
+  transform: translateX(-150px); 
+  z-index: 2;
+}
+
+/* Белая рамка вокруг фото */
+.frame {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #ffffff;
+  z-index: 1; /* Рамка под фото (или над, посмотри в фигме) */
+}
+
+.photo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2; /* Фото над рамкой */
+  box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.1); /* Тень, чтобы фото выделялось */
+}

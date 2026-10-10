@@ -1,0 +1,60 @@
+.servicesSection {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.cardsWrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #111;
+    margin: 20px 0 15px;
+  }
+  
+  p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 25px;
+  }
+}
+
+.cardImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.readMoreBtn {
+  background-color: transparent;
+  color: #111;
+  border: 1px solid #111;
+  padding: 12px 25px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: #111;
+    color: #fff;
+  }
+}
