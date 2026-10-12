@@ -1,0 +1,110 @@
+.testimonialsSection {
+  padding: 100px 0;
+  background-color: #EEF4F4; /* Светло-голубой фон секции */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.subtitle {
+  font-size: 12px;
+  font-weight: bold;
+  color: #7A9B9B;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  line-height: 1.2;
+  color: #111;
+}
+
+.cardsWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  flex: 1;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Верхняя светлая часть с текстом */
+.textBlock {
+  background-color: #ffffff;
+  padding: 50px 40px;
+  
+  p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin: 0;
+  }
+}
+
+/* Нижняя темная часть с автором */
+.authorBlock {
+  background-color: #2F3E3E; /* Темно-зеленый цвет */
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.authorInfo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border: 2px solid #fff; /* Белая рамка вокруг фото */
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.stars {
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.name {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.country {
+  font-size: 13px;
+  color: #aaaaaa;
+}
+
+.quoteIcon {
+  width: 50px; /* Отрегулируй размер кавычек по макету */
+  height: auto;
+  opacity: 0.8;
+}
