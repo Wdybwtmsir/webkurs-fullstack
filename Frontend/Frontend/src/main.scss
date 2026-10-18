@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Manrope', sans-serif;
+  overflow-x: hidden;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 38px !important;
+  }
+
+  h2 {
+    font-size: 32px !important;
+  }
+
+  section {
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  [class*="grid"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 30px !important;
+  }
+
+  [class*="locationRow"],
+  [class*="aboutSection"] > div,
+  [class*="contactSection"] > div,
+  [class*="contentLayout"] {
+    flex-direction: column !important;
+    gap: 40px !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  [class*="imageBlock"],
+  [class*="photoWrapper"],
+  [class*="sidebar"] {
+    width: 100% !important;
+    max-width: 500px !important;
+    min-height: auto !important;
+  }
+
+  [class*="content"],
+  [class*="articleBody"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  [class*="contacts"],
+  [class*="contactList"] {
+    align-items: center !important;
+  }
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 30px !important;
+  }
+
+  h2 {
+    font-size: 24px !important;
+  }
+
+  [class*="grid"] {
+    grid-template-columns: 1fr !important;
+    gap: 25px !important;
+  }
+
+  [class*="card"],
+  [class*="formCard"] {
+    padding: 30px 20px !important;
+  }
+
+  section {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+}

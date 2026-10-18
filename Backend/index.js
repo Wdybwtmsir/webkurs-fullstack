@@ -37,7 +37,14 @@ app.get('/api/faq', async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
-
+app.get('/api/blog', async (req, res) => {
+  try {
+    const result = await pool.query('SELECT * FROM blog_posts ORDER BY id ASC');
+    res.json(result.rows);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
 app.post('/api/messages', async (req, res) => {
   try {
     const { name, email, subject, message } = req.body;
@@ -64,7 +71,27 @@ app.post('/api/register', async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+app.post('/api/login', async (req, res) => {
+  try {
+    const { username, password } = req.body;
+    const userResult = await pool.query('SELECT * FROM users WHERE username = $1', [username]);
 
+    if (userResult.rows.length === 0) {
+      return res.status(400).json({ error: 'Пользователь не найден' });
+    }
+
+    const user = userResult.rows[0];
+    const isMatch = await bcrypt.compare(password, user.password);
+
+    if (!isMatch) {
+      return res.status(400).json({ error: 'Неверный пароль' });
+    }
+
+    res.json({ id: user.id, username: user.username });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
