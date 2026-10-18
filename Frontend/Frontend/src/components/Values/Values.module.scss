@@ -1,0 +1,85 @@
+.valuesSection {
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 11px;
+  font-weight: 700;
+  color: #7a9b9b;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  line-height: 1.2;
+  color: #111111;
+  margin: 0 0 60px 0;
+  font-weight: 700;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 35px 0;
+  border-bottom: 1px solid #e5eaea;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.iconBox {
+  width: 90px;
+  height: 90px;
+  border: 1px solid #7a9b9b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 15px;
+  background-color: #ffffff;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+}
+
+.content {
+  flex: 1;
+
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #111111;
+    margin: 0 0 10px 0;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #666666;
+    margin: 0;
+  }
+}

@@ -1,0 +1,123 @@
+.contactSection {
+  padding: 100px 0 120px 0;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+}
+
+.imageBlock {
+  flex: 1;
+  position: relative;
+  max-width: 500px;
+  min-height: 550px;
+}
+
+.bgBlock {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 85%;
+  height: 90%;
+  background-color: #8CA9A9;
+  z-index: 1;
+}
+
+.photo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 85%;
+  height: 90%;
+  object-fit: cover;
+  z-index: 2;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  flex: 1;
+  max-width: 520px;
+}
+
+.subtitle {
+  font-size: 11px;
+  font-weight: 700;
+  color: #7A9B9B;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 44px;
+  font-weight: 700;
+  color: #111111;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666666;
+  margin: 0 0 40px 0;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.iconBox {
+  width: 52px;
+  height: 52px;
+  border: 1px solid #7A9B9B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  img {
+    width: 22px;
+    height: auto;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #111111;
+    margin: 0;
+  }
+
+  p {
+    font-size: 12px;
+    font-weight: 700;
+    color: #666666;
+    letter-spacing: 0.5px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
