@@ -26,14 +26,22 @@ function Header() {
             <ul>
               <li><Link to="/">Home</Link></li>
               <li className={styles.hasDropdown}>
-                <Link to="#">Pages <span>▼</span></Link>
+                <span className={styles.dropdownTrigger}>Pages <span>▼</span></span>
+                <ul className={styles.dropdownMenu}>
+                  <li><Link to="/team">Team</Link></li>
+                  <li><Link to="/team-single">Team Single</Link></li>
+                  <li><Link to="/services-single">Service Single</Link></li>
+                  <li><Link to="/blog">Blog</Link></li>
+                  <li><Link to="/blog-single">Blog Single</Link></li>
+                  <li><Link to="/locations">Locations</Link></li>
+                </ul>
               </li>
               <li><Link to="/about">About</Link></li>
               <li><Link to="/services">Services</Link></li>
               <li><Link to="/contact">Contact</Link></li>
             </ul>
           </nav>
-          
+
           <div className={styles.socials}>
             <a href="#"><img src={fbIcon} alt="Facebook" /></a>
             <a href="#"><img src={twIcon} alt="Twitter" /></a>

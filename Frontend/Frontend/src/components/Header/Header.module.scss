@@ -1,11 +1,13 @@
 .header {
-  border-bottom: 1px solid #e0e0e0; /* Подсмотри точный цвет линии в фигме */
+  border-bottom: 1px solid #e0e0e0;
   background-color: #ffffff;
-  padding: 20px 0; /* Отрегулируй отступы по фигме */
+  padding: 20px 0;
+  position: relative;
+  z-index: 100;
 }
 
 .container {
-  max-width: 1200px; /* Посмотри ширину контейнера в фигме */
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
   display: flex;
@@ -16,15 +18,15 @@
 .leftSide {
   display: flex;
   align-items: center;
-  gap: 40px; /* Расстояние между лого и телефоном */
+  gap: 40px;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  
+
   img {
-    height: 30px; /* Высота логотипа */
+    height: 30px;
   }
 }
 
@@ -33,46 +35,104 @@
   align-items: center;
   gap: 10px;
   font-weight: 500;
-  font-size: 14px; /* Подставь свои значения */
-  color: #333;
+  font-size: 14px;
+  color: #333333;
 }
 
 .rightSide {
   display: flex;
   align-items: center;
-  gap: 30px; /* Расстояние между меню, соцсетями и кнопкой */
+  gap: 30px;
 }
 
 .nav {
-  ul {
+  > ul {
     display: flex;
     list-style: none;
     gap: 25px;
     margin: 0;
     padding: 0;
+    align-items: center;
   }
 
   li {
     a {
       text-decoration: none;
-      color: #555; /* Цвет ссылок */
+      color: #555555;
       font-size: 14px;
       font-weight: 500;
       transition: color 0.3s ease;
 
       &:hover {
-        color: #7A9B9B; /* Цвет при наведении */
+        color: #7A9B9B;
       }
     }
   }
-  
-  .hasDropdown a {
+
+  .hasDropdown {
+    position: relative;
+    cursor: pointer;
+
+    &:hover .dropdownMenu {
+      display: flex;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  .dropdownTrigger {
     display: flex;
     align-items: center;
     gap: 5px;
-    
+    font-size: 14px;
+    font-weight: 500;
+    color: #555555;
+    transition: color 0.3s ease;
+
     span {
-      font-size: 10px;
+      font-size: 9px;
+    }
+
+    &:hover {
+      color: #7A9B9B;
+    }
+  }
+
+  .dropdownMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    list-style: none;
+    margin: 10px 0 0 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: all 0.2s ease;
+    z-index: 1000;
+
+    li {
+      width: 100%;
+
+      a {
+        padding: 9px 20px;
+        display: block;
+        color: #444444;
+        font-size: 13px;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background-color: #EEF4F4;
+          color: #7A9B9B;
+        }
+      }
     }
   }
 }
@@ -80,14 +140,14 @@
 .socials {
   display: flex;
   gap: 15px;
-  
+
   a {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     img {
-      width: 16px; /* Размер иконок соцсетей */
+      width: 16px;
       height: auto;
     }
   }
@@ -97,8 +157,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: #7A9B9B; /* Тот самый сине-зеленый цвет из Фигмы */
-  color: #fff;
+  background-color: #7A9B9B;
+  color: #ffffff;
   border: none;
   padding: 12px 24px;
   font-size: 12px;
@@ -108,7 +168,7 @@
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: #5C7A7A; /* Цвет кнопки при наведении (сделай чуть темнее) */
+    background-color: #5C7A7A;
   }
 
   img {
